@@ -1,5 +1,5 @@
 ﻿module states {
-    // START CLASS
+    // PORTAL 1 CLASS
     export class P1 extends objects.Scene {
         // PRIVATE INSTANCE VARIABLES
         _textLabel: objects.Label;
@@ -53,7 +53,7 @@
         // PRIVATE METHODS
         // EVENT HANDLERS
         private _clickRedButton(event: createjs.MouseEvent): void {
-            changeState(config.START_STATE);
+            changeState(config.DEATH1_STATE);
         }
 
         private _clickGreenButton(event: createjs.MouseEvent): void {

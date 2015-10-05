@@ -1,5 +1,5 @@
 ﻿module states {
-    // START CLASS
+    // PORTAL 2 (WRONG) CLASS
     export class P2_Wrong extends objects.Scene {
         // PRIVATE INSTANCE VARIABLES
         _textLabel: objects.Label;

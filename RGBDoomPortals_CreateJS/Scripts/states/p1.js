@@ -5,7 +5,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var states;
 (function (states) {
-    // START CLASS
+    // PORTAL 1 CLASS
     var P1 = (function (_super) {
         __extends(P1, _super);
         // CONSTRUCTOR
@@ -43,7 +43,7 @@ var states;
         // PRIVATE METHODS
         // EVENT HANDLERS
         P1.prototype._clickRedButton = function (event) {
-            changeState(config.START_STATE);
+            changeState(config.DEATH1_STATE);
         };
         P1.prototype._clickGreenButton = function (event) {
             changeState(config.START_STATE);

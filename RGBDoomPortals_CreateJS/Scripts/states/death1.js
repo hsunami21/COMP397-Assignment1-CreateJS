@@ -5,21 +5,20 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var states;
 (function (states) {
-    // PORTAL 2 (WRONG) CLASS
-    var P2_Wrong = (function (_super) {
-        __extends(P2_Wrong, _super);
+    // DEATH 1 CLASS
+    var Death1 = (function (_super) {
+        __extends(Death1, _super);
         // CONSTRUCTOR
-        function P2_Wrong() {
+        function Death1() {
             _super.call(this);
         }
         // PUBLIC METHODS
-        P2_Wrong.prototype.start = function () {
+        Death1.prototype.start = function () {
             // hello label
-            this._textLabel = new objects.Label("You step through the portal and end up in another room. This \
-\n\n\nroom also has red, green, and blue portals. You see another \
-\n\n\nnote on a table and it reads: \"Hmmm... you were lucky that \
-\n\n\ntime... Well, pick again.\" \
-\n\n\n\n\nWhich portal do you go through?", "18px Consolas", "#000000", 320, 190);
+            this._textLabel = new objects.Label("You step through the portal and find yourself in the \
+\n\n\nmiddle of a horde of zombies. A voice speaks out and says, \
+\n\n\n\"Unfortunate... Very unfortunate...\" As the zombies swarm \
+\n\n\nat you, you realize that this is the end.", "18px Consolas", "#000000", 320, 190);
             this.addChild(this._textLabel); // add label to the stage
             // red portal button
             this._redButton = new objects.Button("RedButton", 135, 415);
@@ -37,20 +36,20 @@ var states;
             this.addChild(this._blueButton);
             stage.addChild(this);
         };
-        P2_Wrong.prototype.update = function () {
+        Death1.prototype.update = function () {
         };
         // PRIVATE METHODS
         // EVENT HANDLERS
-        P2_Wrong.prototype._clickRedButton = function (event) {
+        Death1.prototype._clickRedButton = function (event) {
             changeState(config.START_STATE);
         };
-        P2_Wrong.prototype._clickGreenButton = function (event) {
+        Death1.prototype._clickGreenButton = function (event) {
             changeState(config.START_STATE);
         };
-        P2_Wrong.prototype._clickBlueButton = function (event) {
+        Death1.prototype._clickBlueButton = function (event) {
             changeState(config.START_STATE);
         };
-        return P2_Wrong;
+        return Death1;
     })(objects.Scene);
-    states.P2_Wrong = P2_Wrong;
+    states.Death1 = Death1;
 })(states || (states = {}));
