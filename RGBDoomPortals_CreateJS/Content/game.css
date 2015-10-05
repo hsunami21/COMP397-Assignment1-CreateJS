@@ -1,0 +1,15 @@
+﻿body {
+    background-image: url('../Assets/images/Background_Main.jpg');
+}
+
+canvas {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 25%;
+    background-color:#9E9E9E;
+}
+
+.game {
+    width:80%;
+    margin: 0 auto;
+}
