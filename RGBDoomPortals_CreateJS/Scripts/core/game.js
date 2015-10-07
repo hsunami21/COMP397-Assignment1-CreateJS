@@ -1,5 +1,4 @@
 /*
-
     Source name: RGB Doom Portals
     Author: Wendall Hsu 300739743
     Last Modified By: Wendall Hsu
@@ -24,9 +23,14 @@
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/scene.ts" />
+/// <reference path="../states/win.ts" />
+/// <reference path="../states/death5.ts" />
+/// <reference path="../states/death4.ts" />
+/// <reference path="../states/death3.ts" />
+/// <reference path="../states/death2.ts" />
 /// <reference path="../states/death1.ts" />
-/// <reference path="../states/p2_wrong.ts" />
-/// <reference path="../states/p1.ts" />
+/// <reference path="../states/rb.ts" />
+/// <reference path="../states/r.ts" />
 /// <reference path="../states/start.ts" />
 // GLOBAL GAME FRAMEWORK VARIABLES
 var canvas;
@@ -37,9 +41,14 @@ var currentState; // alias for current state
 var assets;
 // GAME OBJECTS
 var start;
-var p1;
-var p2_wrong;
+var r;
+var rb;
 var death1;
+var death2;
+var death3;
+var death4;
+var death5;
+var win;
 // MANIFEST OF ALL ASSETS
 var manifest = [
     { id: "BlueButton", src: "../../Assets/images/BlueButton.png" },
@@ -49,7 +58,8 @@ var manifest = [
     { id: "OrangeButton", src: "../../Assets/images/OrangeButton.png" },
     { id: "PinkButton", src: "../../Assets/images/PinkButton.png" },
     { id: "PurpleButton", src: "../../Assets/images/PurpleButton.png" },
-    { id: "RedButton", src: "../../Assets/images/RedButton.png" }
+    { id: "RedButton", src: "../../Assets/images/RedButton.png" },
+    { id: "StartOverButton", src: "../../Assets/images/StartOverButton.png" },
 ];
 function preload() {
     assets = new createjs.LoadQueue();
@@ -94,23 +104,53 @@ function changeState(state) {
             start = new states.Start();
             currentState = start;
             break;
-        case config.P1_STATE:
+        case config.R_STATE:
             // show portal 1 path scene
             stage.removeAllChildren();
-            p1 = new states.P1();
-            currentState = p1;
+            r = new states.R();
+            currentState = r;
             break;
-        case config.P2_WRONG_STATE:
+        case config.RB_STATE:
             // show portal 2 wrong path scene
             stage.removeAllChildren();
-            p2_wrong = new states.P2_Wrong();
-            currentState = p2_wrong;
+            rb = new states.RB();
+            currentState = rb;
             break;
         case config.DEATH1_STATE:
             // show death 1 scene
             stage.removeAllChildren();
             death1 = new states.Death1();
             currentState = death1;
+            break;
+        case config.DEATH2_STATE:
+            // show death 2 scene
+            stage.removeAllChildren();
+            death2 = new states.Death2();
+            currentState = death2;
+            break;
+        case config.DEATH3_STATE:
+            // show death 3 scene
+            stage.removeAllChildren();
+            death3 = new states.Death3();
+            currentState = death3;
+            break;
+        case config.DEATH4_STATE:
+            // show death 3 scene
+            stage.removeAllChildren();
+            death4 = new states.Death4();
+            currentState = death4;
+            break;
+        case config.DEATH5_STATE:
+            // show death 3 scene
+            stage.removeAllChildren();
+            death5 = new states.Death5();
+            currentState = death5;
+            break;
+        case config.WIN_STATE:
+            // show death 3 scene
+            stage.removeAllChildren();
+            win = new states.Win();
+            currentState = win;
             break;
     }
     currentState.start();

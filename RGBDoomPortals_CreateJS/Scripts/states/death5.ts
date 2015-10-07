@@ -1,10 +1,10 @@
 ﻿module states {
 
-    export class Death1 extends objects.Scene {
+    export class Death5 extends objects.Scene {
         // PRIVATE INSTANCE VARIABLES
         _textLabel: objects.Label;
         _startOverButton: objects.Button;
-   
+    
 
         // CONSTRUCTOR
         constructor() {
@@ -15,10 +15,13 @@
         public start(): void {
 
             // hello label
-            this._textLabel = new objects.Label("You step through the portal and find yourself in the \
-\n\n\nmiddle of a horde of zombies. A voice speaks out and says, \
-\n\n\n\"Unfortunate... Very unfortunate...\" As the zombies swarm \
-\n\n\nat you, you realize that this is the end.", "18px Consolas", "#000000", 320, 190);
+            this._textLabel = new objects.Label("You step through the portal and find yourself strapped into \
+\n\n\na chair. You hear voices whispering all around you. Then a \
+\n\n\nman walks up to you and says, \"Mr.White... You have chosen \
+\n\n\nthe wrong portal. Who in their right mind would go for the \
+\n\n\nbrown? It's too bad... You were so close.\" Everything goes \
+\n\n\nblack and you hear him laughing. The laughing grows fainter \
+\n\n\nand fainter until... Nothing.", "18px Consolas", "#000000", 320, 190);
             this.addChild(this._textLabel); // add label to the stage
 
 

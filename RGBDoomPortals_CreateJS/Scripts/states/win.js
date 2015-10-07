@@ -5,19 +5,23 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var states;
 (function (states) {
-    var Death1 = (function (_super) {
-        __extends(Death1, _super);
+    var Win = (function (_super) {
+        __extends(Win, _super);
         // CONSTRUCTOR
-        function Death1() {
+        function Win() {
             _super.call(this);
         }
         // PUBLIC METHODS
-        Death1.prototype.start = function () {
+        Win.prototype.start = function () {
             // hello label
-            this._textLabel = new objects.Label("You step through the portal and find yourself in the \
-\n\n\nmiddle of a horde of zombies. A voice speaks out and says, \
-\n\n\n\"Unfortunate... Very unfortunate...\" As the zombies swarm \
-\n\n\nat you, you realize that this is the end.", "18px Consolas", "#000000", 320, 190);
+            this._textLabel = new objects.Label("You step through the portal and find yourself looking into \
+\n\n\nthe eyes of a beautiful woman. She asks, \"Stephen, are \
+\n\n\nyou okay?!\" You nod your head. She then gives you a hug \
+\n\n\nand says, \"Let's go home, baby. I've got a surprise for \
+\n\n\nyou.\" You notice a table with a note on it. You go to it \
+\n\n\nand read it: \"Congratulations, Mr.White. You chose the \
+\n\n\nright path.\" You don't recall anything that happened, \
+\n\n\nbut you know that you were lucky.", "18px Consolas", "#000000", 320, 190);
             this.addChild(this._textLabel); // add label to the stage
             // start over button
             this._startOverButton = new objects.Button("StartOverButton", 290, 415);
@@ -25,14 +29,14 @@ var states;
             this.addChild(this._startOverButton);
             stage.addChild(this);
         };
-        Death1.prototype.update = function () {
+        Win.prototype.update = function () {
         };
         // PRIVATE METHODS
         // EVENT HANDLERS
-        Death1.prototype._clickStartOverButton = function (event) {
+        Win.prototype._clickStartOverButton = function (event) {
             changeState(config.START_STATE);
         };
-        return Death1;
+        return Win;
     })(objects.Scene);
-    states.Death1 = Death1;
+    states.Win = Win;
 })(states || (states = {}));

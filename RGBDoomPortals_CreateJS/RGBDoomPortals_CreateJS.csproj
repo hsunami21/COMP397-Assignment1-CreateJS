@@ -77,6 +77,7 @@
     <Content Include="Assets\images\PinkButton.png" />
     <Content Include="Assets\images\PurpleButton.png" />
     <Content Include="Assets\images\RedButton.png" />
+    <Content Include="Assets\images\StartOverButton.png" />
     <Content Include="packages.config" />
     <Content Include="Scripts\lib\jquery-2.1.4.min.map" />
     <Content Include="Assets\fonts\Dock51.ttf" />
@@ -115,9 +116,14 @@
     <TypeScriptCompile Include="Scripts\objects\label.ts" />
     <TypeScriptCompile Include="Scripts\objects\scene.ts" />
     <TypeScriptCompile Include="Scripts\states\death1.ts" />
-    <TypeScriptCompile Include="Scripts\states\p1.ts" />
-    <TypeScriptCompile Include="Scripts\states\p2_wrong.ts" />
+    <TypeScriptCompile Include="Scripts\states\death2.ts" />
+    <TypeScriptCompile Include="Scripts\states\death3.ts" />
+    <TypeScriptCompile Include="Scripts\states\death4.ts" />
+    <TypeScriptCompile Include="Scripts\states\death5.ts" />
+    <TypeScriptCompile Include="Scripts\states\r.ts" />
+    <TypeScriptCompile Include="Scripts\states\rb.ts" />
     <TypeScriptCompile Include="Scripts\states\start.ts" />
+    <TypeScriptCompile Include="Scripts\states\win.ts" />
     <TypeScriptCompile Include="Scripts\typings\createjs-lib\createjs-lib.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\easeljs\easeljs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />

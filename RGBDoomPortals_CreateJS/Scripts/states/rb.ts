@@ -1,6 +1,6 @@
 ﻿module states {
-    // PORTAL 2 (WRONG) CLASS
-    export class P2_Wrong extends objects.Scene {
+
+    export class RB extends objects.Scene {
         // PRIVATE INSTANCE VARIABLES
         _textLabel: objects.Label;
         _redButton: objects.Button;
@@ -52,15 +52,15 @@
         // PRIVATE METHODS
         // EVENT HANDLERS
         private _clickRedButton(event: createjs.MouseEvent): void {
-            changeState(config.START_STATE);
+            changeState(config.DEATH3_STATE);
         }
 
         private _clickGreenButton(event: createjs.MouseEvent): void {
-            changeState(config.START_STATE);
+            changeState(config.DEATH1_STATE);
         }
 
         private _clickBlueButton(event: createjs.MouseEvent): void {
-            changeState(config.START_STATE);
+            changeState(config.DEATH3_STATE);
         }
     }
 

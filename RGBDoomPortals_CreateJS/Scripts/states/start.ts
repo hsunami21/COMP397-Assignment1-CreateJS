@@ -1,5 +1,5 @@
 ﻿module states {
-    // START CLASS
+
     export class Start extends objects.Scene {
         // PRIVATE INSTANCE VARIABLES
         _textLabel: objects.Label;
@@ -56,15 +56,15 @@
         // PRIVATE METHODS
         // EVENT HANDLERS
         private _clickRedButton(event: createjs.MouseEvent): void {
-            changeState(config.P1_STATE);
+            changeState(config.R_STATE);
         }
 
         private _clickGreenButton(event: createjs.MouseEvent): void {
-            changeState(config.P1_STATE);
+            changeState(config.WIN_STATE);
         }
 
         private _clickBlueButton(event: createjs.MouseEvent): void {
-            changeState(config.P1_STATE);
+            changeState(config.DEATH5_STATE);
         }
     }
 
