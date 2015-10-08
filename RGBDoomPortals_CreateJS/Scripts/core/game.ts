@@ -12,7 +12,7 @@
         Commit #2: Added first death state
         Commit #3: Completed all death scenes and win scene. Finished first red portal path
         Commit #4: Completed green path
-
+        Commit #5: Completed full game
 */
 
 /// <reference path="../config/config.ts" />
@@ -36,6 +36,11 @@
 /// <reference path="../states/death2.ts" />
 /// <reference path="../states/death1.ts" />
 
+/// <reference path="../states/bg.ts" />
+/// <reference path="../states/bgr.ts" />
+/// <reference path="../states/br.ts" />
+/// <reference path="../states/bb.ts" />
+/// <reference path="../states/b.ts" />
 /// <reference path="../states/ggo.ts" />
 /// <reference path="../states/gg.ts" />
 /// <reference path="../states/g.ts" />
@@ -61,6 +66,11 @@ var rb: states.RB;
 var g: states.G;
 var gg: states.GG;
 var ggo: states.GGO;
+var b: states.B;
+var bb: states.BB;
+var br: states.BR;
+var bg: states.BG;
+var bgr: states.BGR;
 var death1: states.Death1;
 var death2: states.Death2;
 var death3: states.Death3;
@@ -79,7 +89,7 @@ var manifest = [
     { id: "PurpleButton", src: "../../Assets/images/PurpleButton.png" },
     { id: "RedButton", src: "../../Assets/images/RedButton.png" },
     { id: "StartOverButton", src: "../../Assets/images/StartOverButton.png" },
-
+    { id: "Yay", src: "../../Assets/audio/yay.ogg" }
 ];
 
 function preload(): void {
@@ -168,6 +178,41 @@ function changeState(state): void {
             stage.removeAllChildren();
             ggo = new states.GGO();
             currentState = ggo;
+            break;
+
+        case config.B_STATE:
+            // show portal 1 path scene
+            stage.removeAllChildren();
+            b = new states.B();
+            currentState = b;
+            break;
+
+        case config.BR_STATE:
+            // blue | red path scene
+            stage.removeAllChildren();
+            br = new states.BR();
+            currentState = br;
+            break;
+
+        case config.BG_STATE:
+            // blue | green path scene
+            stage.removeAllChildren();
+            bg = new states.BG();
+            currentState = bg;
+            break;
+
+        case config.BGR_STATE:
+            // blue | green path scene
+            stage.removeAllChildren();
+            bgr = new states.BGR();
+            currentState = bgr;
+            break;
+
+        case config.BB_STATE:
+            // blue | blue path scene
+            stage.removeAllChildren();
+            bb = new states.BB();
+            currentState = bb;
             break;
 
         case config.DEATH1_STATE:

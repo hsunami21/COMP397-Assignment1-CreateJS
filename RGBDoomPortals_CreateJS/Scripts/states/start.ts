@@ -64,7 +64,7 @@
         }
 
         private _clickBlueButton(event: createjs.MouseEvent): void {
-            changeState(config.DEATH5_STATE);
+            changeState(config.B_STATE);
         }
     }
 

@@ -13,6 +13,8 @@ var states;
         }
         // PUBLIC METHODS
         Win.prototype.start = function () {
+            // yay
+            createjs.Sound.play("Yay"); // activate static class play 
             // hello label
             this._textLabel = new objects.Label("You step through the portal and find yourself looking into \
 \n\n\nthe eyes of a beautiful woman. She asks, \"Stephen, are \

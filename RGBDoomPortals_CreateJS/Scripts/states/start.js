@@ -51,7 +51,7 @@ var states;
             changeState(config.G_STATE);
         };
         Start.prototype._clickBlueButton = function (event) {
-            changeState(config.DEATH5_STATE);
+            changeState(config.B_STATE);
         };
         return Start;
     })(objects.Scene);
