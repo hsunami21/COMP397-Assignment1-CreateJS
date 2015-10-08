@@ -2,7 +2,7 @@
     Source name: RGB Doom Portals
     Author: Wendall Hsu 300739743
     Last Modified By: Wendall Hsu
-    Date Last Modified: October 5, 2015
+    Date Last Modified: October 8, 2015
     Program Description: You play as Mr.White, an experimental test subject who has been drugged and put into a deep sleep.In your sleep, you dream about waking up in a room that contains
                          three coloured portals - a red one, a green one, and a blue one.You must choose the portal that will lead to your safety, but be wary, for if you choose the wrong
                          one, you will suffer a terrible death and will never wake from your sleep.Now...which colour is your favourite?
@@ -10,6 +10,8 @@
     Revision History:
         Commit #1: Initial commit and completion of three states: start, portal 1, portal 2 (wrong path)
         Commit #2: Added first death state
+        Commit #3: Completed all death scenes and win scene. Finished first red portal path
+        Commit #4: Completed green path
 
 */
 /// <reference path="../config/config.ts" />
@@ -29,6 +31,9 @@
 /// <reference path="../states/death3.ts" />
 /// <reference path="../states/death2.ts" />
 /// <reference path="../states/death1.ts" />
+/// <reference path="../states/ggo.ts" />
+/// <reference path="../states/gg.ts" />
+/// <reference path="../states/g.ts" />
 /// <reference path="../states/rb.ts" />
 /// <reference path="../states/r.ts" />
 /// <reference path="../states/start.ts" />
@@ -43,6 +48,9 @@ var assets;
 var start;
 var r;
 var rb;
+var g;
+var gg;
+var ggo;
 var death1;
 var death2;
 var death3;
@@ -111,10 +119,28 @@ function changeState(state) {
             currentState = r;
             break;
         case config.RB_STATE:
-            // show portal 2 wrong path scene
+            // red | blue path scene
             stage.removeAllChildren();
             rb = new states.RB();
             currentState = rb;
+            break;
+        case config.G_STATE:
+            // show portal 1 path scene
+            stage.removeAllChildren();
+            g = new states.G();
+            currentState = g;
+            break;
+        case config.GG_STATE:
+            // green | green path scene
+            stage.removeAllChildren();
+            gg = new states.GG();
+            currentState = gg;
+            break;
+        case config.GGO_STATE:
+            // green | green | orange path scene
+            stage.removeAllChildren();
+            ggo = new states.GGO();
+            currentState = ggo;
             break;
         case config.DEATH1_STATE:
             // show death 1 scene
@@ -135,19 +161,19 @@ function changeState(state) {
             currentState = death3;
             break;
         case config.DEATH4_STATE:
-            // show death 3 scene
+            // show death 4 scene
             stage.removeAllChildren();
             death4 = new states.Death4();
             currentState = death4;
             break;
         case config.DEATH5_STATE:
-            // show death 3 scene
+            // show death 5 scene
             stage.removeAllChildren();
             death5 = new states.Death5();
             currentState = death5;
             break;
         case config.WIN_STATE:
-            // show death 3 scene
+            // show win scene
             stage.removeAllChildren();
             win = new states.Win();
             currentState = win;

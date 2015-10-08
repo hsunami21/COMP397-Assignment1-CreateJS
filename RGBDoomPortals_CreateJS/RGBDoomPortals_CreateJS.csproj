@@ -120,6 +120,14 @@
     <TypeScriptCompile Include="Scripts\states\death3.ts" />
     <TypeScriptCompile Include="Scripts\states\death4.ts" />
     <TypeScriptCompile Include="Scripts\states\death5.ts" />
+    <TypeScriptCompile Include="Scripts\states\g.ts" />
+    <TypeScriptCompile Include="Scripts\states\bgr.ts" />
+    <TypeScriptCompile Include="Scripts\states\bb.ts" />
+    <TypeScriptCompile Include="Scripts\states\ggo.ts" />
+    <TypeScriptCompile Include="Scripts\states\bg.ts" />
+    <TypeScriptCompile Include="Scripts\states\br.ts" />
+    <TypeScriptCompile Include="Scripts\states\b.ts" />
+    <TypeScriptCompile Include="Scripts\states\gg.ts" />
     <TypeScriptCompile Include="Scripts\states\r.ts" />
     <TypeScriptCompile Include="Scripts\states\rb.ts" />
     <TypeScriptCompile Include="Scripts\states\start.ts" />
